@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <style>
+        body {
+            color: #fff;
+            background-color: #202125;
+        }
+
+
+        .main-bg-theme {
+            background-color: #202125;
+            padding: 30px 12px;
+        }
+        
+        .nav-arrow {
+            width: 42px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .nav-arrow-left {
+            background-color: #202125;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+        }
+        
+        .nav-arrow-right {
+            background-color: #2D3035;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            margin-left: 2px;
+        }
+        
+        .provider-card {
+            background-color: #202125 !important;
+            width: 315px;
+            position: relative;
+            color: white;
+            border-radius: 0.375rem;
+            margin-right: 10px;
+            flex: none;
+        }
+        
+        .provider-logo {
+            width: 64px;
+        }
+        
+        .provider-name {
+            font-size: 12px;
+        }
+        
+        .provider-games {
+            font-size: 12px;
+            color: #97a8b8;
+        }
+        
+        .provider-arrow {
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+            color: rgb(148, 159, 171);
+        }
+        
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px;
+            padding: 5px;
+        }
+        
+        .games-grid img {
+            width: 100%;
+            height: auto;
+        }
+        
+        .scroll-container {
+            overflow-x: auto;
+            white-space: nowrap;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        p,
+        span,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #fff;
+        }
+
+        .regBtn {
+            background: #4dffff;
+            box-shadow: 0 .23rem 0 0 #239595, inset 0 0 .16rem .10667rem #27adad, 0 0 .10667rem .13333rem rgba(51, 41, 3, .07);
+            padding: 8px 20px;
+            border-radius: 10px;
+            font-size: 13px;
+            color: #000;
+            float: right;
+        }
+
+        a.regBtn {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .loginBtn {
+            padding: 8px 20px;
+            border-radius: 10px;
+            font-size: 13px;
+            color: #fff;
+            float: right;
+        }
+
+        a.loginBtn {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 400px;
+            border: 1px solid #000;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        header {
+            background-color: #202125;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 99;
+        }
+
+        header img.logo {
+            width: 112px;
+            left: 0;
+            top: 5px;
+        }
+
+        footer {
+            background-color: #202125;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 11px;
+            height: 60px;
+            z-index: 99;
+        }
+
+        footer img {
+            width: 30px;
+            margin: 10px 0 5px 0;
+        }
+
+
+        .nav-tabs {
+            border-bottom: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-link {
+            background-color: transparent !important;
+            border: none !important;
+            color: #ccc !important;
+            width: 100px;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px 5px;
+        }
+
+        .nav-link .material-icons {
+            font-size: 16px;
+            transform: translateY(3px);
+        }
+
+        .nav-link.active {
+            background-color: rgba(255, 255, 255, 0.05) !important;
+            color: #4dffff !important;
+        }
+
+        .nav-link.active .material-icons {
+            color: #4dffff !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="row py-2">
+                <div class="col-6">
+                    <img class="logo" src="img/logo.png">
+                </div>
+                <div class="col-6">
+                    <a href="#" class="regBtn">註冊</a>
+                    <a href="#" class="loginBtn">登入</a>
+                </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-12">
+                    <ul class="nav nav-tabs overflow-auto flex-nowrap">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">
+                                <span class="material-icons"> home </span> 首頁
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="material-icons"> casino </span> 真人
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="material-icons"> games </span> 電子
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="material-icons"> rocket </span> 加密遊戲
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span class="material-icons"> sports_basketball </span> 體育
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container" style="margin: 100px auto">
+        <div class="main-bg-theme">
+            <div class="d-flex justify-content-between text-white mb-3">
+                <div class="fs-4 fw-bold">遊戲廠商</div>
+            </div>
+            
+            <div class="scroll-container">
+                <div class="d-flex">
+                    <!-- PG SOFT -->
+                    <div class="provider-card">
+                        <div class="d-flex justify-content-between align-items-center p-2">
+                            <div class="d-flex align-items-center">
+                                <img src="img/provider/logo1.webp" class="provider-logo">
+                                <div class="d-flex flex-column ms-2">
+                                    <div class="provider-name">PG SOFT</div>
+                                    <div class="provider-games">111款游戏</div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="mdi mdi-chevron-right provider-arrow"></i>
+                            </div>
+                        </div>
+                        <div class="games-grid">
+                            <img src="img/provider/2-1.webp" alt="game">
+                            <img src="img/provider/2-2.webp" alt="game">
+                            <img src="img/provider/2-3.webp" alt="game">
+                            <img src="img/provider/2-4.webp" alt="game">
+                            <img src="img/provider/2-5.webp" alt="game">
+                            <img src="img/provider/2-6.webp" alt="game">
+                        </div>
+                    </div>
+    
+                    <!-- PRAGMATIC PLAY -->
+                    <div class="provider-card">
+                        <div class="d-flex justify-content-between align-items-center p-2">
+                            <div class="d-flex align-items-center">
+                                <img src="img/provider/logo2.webp" class="provider-logo">
+                                <div class="d-flex flex-column ms-2">
+                                    <div class="provider-name">PRAGMATIC PLAY</div>
+                                    <div class="provider-games">349款游戏</div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="mdi mdi-chevron-right provider-arrow"></i>
+                            </div>
+                        </div>
+                        <div class="games-grid">
+                            <img src="img/provider/3-1.webp" alt="game">
+                            <img src="img/provider/3-2.webp" alt="game">
+                            <img src="img/provider/3-3.webp" alt="game">
+                            <img src="img/provider/3-4.webp" alt="game">
+                            <img src="img/provider/3-5.webp" alt="game">
+                            <img src="img/provider/3-6.webp" alt="game">
+                        </div>
+                    </div>
+    
+                    <!-- AG GAMING -->
+                    <div class="provider-card">
+                        <div class="d-flex justify-content-between align-items-center p-2">
+                            <div class="d-flex align-items-center">
+                                <img src="img/provider/logo3.webp" class="provider-logo">
+                                <div class="d-flex flex-column ms-2">
+                                    <div class="provider-name">AG GAMING</div>
+                                    <div class="provider-games">19款游戏</div>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="mdi mdi-chevron-right provider-arrow"></i>
+                            </div>
+                        </div>
+                        <div class="games-grid">
+                            <img src="img/provider/4-1.webp" alt="game">
+                            <img src="img/provider/4-2.webp" alt="game">
+                            <img src="img/provider/4-3.webp" alt="game">
+                            <img src="img/provider/4-4.webp" alt="game">
+                            <img src="img/provider/4-5.webp" alt="game">
+                            <img src="img/provider/4-6.webp" alt="game">
+                        </div>
+                    </div>
+    
+                    <!-- 其他供應商卡片結構相同，省略重複代碼 -->
+                </div>
+            </div>
+        
+            <div class="container-fluid py-4">
+                <!-- 主標題區 -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h5>最佳加密貨幣賭場- 歡迎來到GOFUN</h5>
+                    </div>
+                </div>
+        
+                <!-- 介紹區塊 -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h6>GOFUN 全球首選加密貨幣娛樂平台，引領數位娛樂新風潮！</h6>
+                        <p class="text-secondary">加入GOFUN ，享受隱私保護、便利支付與公平透明的遊戲體驗！多元娛樂一站搞定，配備尖端技術保障資金安全，24小時專業客服團隊隨時待命，GOFUN 為您帶來極致流暢的賭場新體驗。</p>
+                    </div>
+                </div>
+        
+                <!-- VIP服務區塊 -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h6>VIP尊榮服務，多重福利等您解鎖！</h6>
+                        <p class="text-secondary">尊享多層級VIP待遇，專屬禮遇涵蓋專人服務、獨家獎勵、反水獎金、升級獎金、特別活動邀請等多項豐厚福利！保持忠誠活躍將連連升級，每一階級都帶來更多驚喜與特權，詳情請聯絡24小時專業客服團隊，我們隨時為您提供詳細資訊。</p>
+                    </div>
+                </div>
+        
+                <!-- 遊戲介紹區塊 -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h6>國際知名遊戲大廠，打造頂級娛樂體驗！</h6>
+                        <p class="text-secondary">GOFUN串接全球知名遊戲供應商，匯集多元化的經典遊戲與創新玩法，涵蓋真人、電子、運動、棋牌、釣魚等精彩內容。高品質畫面與穩定流暢的技術支持，讓您尊享國際級娛樂服務。立即加入，體驗無與倫比的遊戲盛宴！</p>
+                    </div>
+                </div>
+        
+                <!-- 安全保障區塊 -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <h6>隱私至上，資金無憂，專屬您的線上娛樂平台！</h6>
+                        <p class="text-secondary">我們以尖端科技保障會員隱私，全程加密保護，讓您的個人資訊安全無憂。資金管理嚴格透明，支援多種充提方式，快充快提安心無憂。享受隱私與安全兼備的線上娛樂體驗，玩得盡興，無後顧之憂！</p>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+
+        
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="img/menu.png">
+                    <p>选单</p>
+                </div>
+                <div class="col">
+                    <img src="img/recommend.png">
+                    <p>推荐</p>
+                </div>
+                <div class="col">
+                    <img src="img/icon_deposit.png">
+                    <p>存款</p>
+                </div>
+                <div class="col">
+                    <img src="img/activity.png">
+                    <p>活动</p>
+                </div>
+                <div class="col">
+                    <img src="img/chat.png">
+                    <p>任务</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

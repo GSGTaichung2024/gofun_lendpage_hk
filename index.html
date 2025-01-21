@@ -204,6 +204,10 @@
         .nav-link.active .material-icons {
             color: #4dffff !important;
         }
+
+        #gameSlide{
+            margin: 20px 0 30px 0;
+        }
     </style>
 
 </head>
@@ -258,11 +262,23 @@
 
     <div class="container" style="margin: 100px auto">
 
-        <a href="https://www.gofun8.com" target="_blank"><img src="img/banner.png"></a>
-        <a href="https://www.gofun8.com" target="_blank"><img src="img/carousel1.png"></a>
-        <a href="https://www.gofun8.com" target="_blank"><img src="img/card_01.png"></a>
-        <a href="https://www.gofun8.com" target="_blank"><img src="img/card_02.png"></a>
-        <a href="https://www.gofun8.com" target="_blank"><img src="img/card_03.png"></a>
+        <div id="gameSlide" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#gameSlide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <a href="https://www.gofun8.com" target="_blank">
+                  <img src="img/carousel1.png" class="d-block w-100" alt="...">
+                </a>
+              </div>
+            </div>
+        </div>
+
+        <a href="https://www.gofun8.com" target="_blank"><img style="margin: 10px 0; border-radius: 10px;" src="img/banner.png"></a>
+        <a href="https://www.gofun8.com" target="_blank"><img style="margin: 10px 0;" src="img/card_01.png"></a>
+        <a href="https://www.gofun8.com" target="_blank"><img style="margin: 10px 0;" src="img/card_02.png"></a>
+        <a href="https://www.gofun8.com" target="_blank"><img style="margin: 10px 0;" src="img/card_03.png"></a>
 
         <div class="main-bg-theme">
             <div class="d-flex justify-content-between text-white mb-3">
@@ -365,7 +381,7 @@
 
             </div>
 
-            <a href="https://www.gofun8.com" target="_blank"><img src="img/reg.jpg"></a>
+            <a href="https://www.gofun8.com" target="_blank"><img src="img/reg.jpg" style="border-radius: 10px; margin-bottom: 10px;"></a>
 
             <!-- 社群入口 Section -->
             <div class="bg-custom border-top border-custom pt-4 px-3">
